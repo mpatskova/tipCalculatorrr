@@ -4,16 +4,29 @@ body {
     background: linear-gradient(to left, #c39b8c, wheat);
 }
 
+@media (min-width: 600px) {
+
+}
 #container {
     height: 525px;
     width: 360px;
     margin: 100px auto;
     background: white;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
     -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
 }
+
+@media screen and (max-width: 800px) {
+    #container {
+        height: 38rem;
+        text-align: center;
+        width: 100%;
+        background: white;
+        -webkit-border-radius: 20px;
+
+    }
+}
+
 
 h1 {
     background: antiquewhite;
@@ -28,6 +41,13 @@ h1 {
 
 p {
     padding-left: 20px;
+}
+
+@media screen and (max-width: 800px){
+    p {
+        padding-left: 20px;
+        font-size: 26px;
+    }
 }
 
 form input[type="text"] {
@@ -48,6 +68,18 @@ input {
     border: 2px solid grey;
 }
 
+@media screen and (max-width: 800px){
+#billAmount{
+    font-size: 21px;
+    color: #8a4b92;
+    background-color: #f7f7f7;
+    width: 60%;
+    padding: 5px 5px 8px 8px;
+    border-radius: 10px;
+    border: 2px solid grey;
+}
+
+}
 
 #amountOfPeople {
     font-size: 14px;
@@ -60,6 +92,13 @@ input {
     border: 2px solid grey;
 }
 
+@media screen and (max-width: 800px){
+    #amountOfPeople {
+        font-size: 21px;
+        margin-left: 20px;
+    }
+}
+
 #qualityOfService {
     font-size: 25px;
     border-radius: 10px;
@@ -68,6 +107,12 @@ input {
     width: 62%;
 }
 
+@media screen and (max-width: 800px) {
+    #qualityOfService {
+        font-size: 30px;
+        margin-left: 0;
+    }
+}
 button {
     text-transform: uppercase;
     font-weight: bold;
@@ -80,6 +125,14 @@ button {
     color: white;
     border-radius: 25px;
 }
+
+@media screen and (max-width: 800px){
+    button {
+        margin: 20px auto;
+        font-size: 20px;
+    }
+    }
+
 
 button:hover {
     background: #4c2827;
