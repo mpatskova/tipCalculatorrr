@@ -1,33 +1,36 @@
-function calculateTip() {
-    var billAmt = document.getElementById("billAmount").value;
-    var serviceQual = document.getElementById("qualityOfService").value;
-    var numOfPeople = document.getElementById("amountOfPeople").value;
+let calculate = document.getElementById("calculate");
+let eachPerson = document.getElementById("each");
+let totalTip = document.getElementById("totalTip");
+let tip = document.getElementById("tip");
 
+const calculateTip = () => {
+    let billAmt = document.getElementById("billAmount").value;
+    let serviceQual = document.getElementById("qualityOfService").value;
+    let numOfPeople = document.getElementById("amountOfPeople").value;
 
-    if (billAmt === "" || serviceQual == 0) {
-        alert("Prosze wpisac kwote");
+    if (billAmt === "" || serviceQual === 0) {
+        alert("Proszę wpisac kwotę");
         return;
     }
 
     if (numOfPeople === "" || numOfPeople <= 1) {
         numOfPeople = 1;
-        document.getElementById("each").style.display = "none";
+        eachPerson.style.display = "none";
     } else {
-        document.getElementById("each").style.display = "block";
+        eachPerson.style.display = "block";
     }
 
-    var total = (billAmt * serviceQual) / numOfPeople;
+    let total = (billAmt * serviceQual) / numOfPeople;
     total = Math.round(total * 100) / 100;
     total = total.toFixed(2);
-    document.getElementById("totalTip").style.display = "block";
-    document.getElementById("tip").innerHTML = total;
+    totalTip.style.display = "block";
+    tip.innerHTML = total;
 
-}
+};
 
-document.getElementById("totalTip").style.display = "none";
-document.getElementById("each").style.display = "none";
+    totalTip.style.display = "none";
+    eachPerson.style.display = "none";
 
-document.getElementById("calculate").onclick = function() {
+    calculate.onclick = () => {
     calculateTip();
-
 };
