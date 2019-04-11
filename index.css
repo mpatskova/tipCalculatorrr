@@ -7,6 +7,7 @@ body {
 @media (min-width: 600px) {
 
 }
+
 #container {
     height: 525px;
     width: 360px;
@@ -43,10 +44,16 @@ p {
     padding-left: 20px;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
     p {
         padding-left: 20px;
         font-size: 26px;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+    p {
+        font-size: 23px;
     }
 }
 
@@ -68,17 +75,15 @@ input {
     border: 2px solid grey;
 }
 
-@media screen and (max-width: 800px){
-#billAmount{
-    font-size: 21px;
-    color: #8a4b92;
-    background-color: #f7f7f7;
-    width: 60%;
-    padding: 5px 5px 8px 8px;
-    border-radius: 10px;
-    border: 2px solid grey;
+@media screen and (max-width: 800px) {
+    #billAmount {
+        font-size: 21px;
+    }
 }
-
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+    #billAmount {
+        font-size: 18px;
+    }
 }
 
 #amountOfPeople {
@@ -92,10 +97,16 @@ input {
     border: 2px solid grey;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
     #amountOfPeople {
         font-size: 21px;
         margin-left: 20px;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+    #amountOfPeople {
+        font-size: 18px;
     }
 }
 
@@ -113,6 +124,13 @@ input {
         margin-left: 0;
     }
 }
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+    #qualityOfService {
+        font-size: 24px;
+    }
+}
+
 button {
     text-transform: uppercase;
     font-weight: bold;
@@ -126,13 +144,19 @@ button {
     border-radius: 25px;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
     button {
         margin: 20px auto;
         font-size: 20px;
     }
-    }
+}
 
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+    button {
+        font-size: 18px;
+        margin: 20px auto;
+    }
+}
 
 button:hover {
     background: #4c2827;
