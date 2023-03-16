@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Kalkulator napiwków</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-<body>
-<div id="container">
-    <h1>Jaki mam dac napiwek?</h1>
-    <div id="calculator">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Jaki mam dac napiwek?</h1>
+      <div id="calculator">
         <form>
-            <p>
-                Mój rachunek wynosi:
-            </p>
-            <p>
-                <input id="billAmount" type="text" placeholder="Kwota rachunku"> zł
-            </p>
-            <p>
-                Jak wyglądała obsługa?
-            </p>
-                <select id="qualityOfService">
-                    <option disabled selected value="0">- Wybierz -</option>
-                    <option value="0.3">Wybitna - 30%!</option>
-                    <option value="0.2">Dobra :-) - 20%</option>
-                    <option value="0.15">Jest OK - 10%</option>
-                    <option value="0">Chciałam/em skoczyc z mostu - 0%</option>
-                </select>
+          <p>Mój rachunek wynosi:</p>
+          <p>
+            <input id="billAmount" type="text" placeholder="Kwota rachunku" />
+            zł
+          </p>
+          <p>Jak wyglądała obsługa?</p>
+          <select id="qualityOfService">
+            <option disabled selected value="0" id="qualityOfService_wybierz">
+              - Wybierz -
+            </option>
+            <option value="0.3">Wybitna - 30%!</option>
+            <option value="0.2">Dobra :-) - 20%</option>
+            <option value="0.15">Jest OK - 10%</option>
+            <option value="0">Chciałam/em skoczy z mostu - 0%</option>
+          </select>
 
-            <p>
-                Ile osób dzieli rachunek?
-            </p>
-            <input id="amountOfPeople" type="text" placeholder="Ilosc osób"> osób
-            <button type="button" id="calculate">Policz</button>
+          <p>Ile osób dzieli rachunek?</p>
+          <input id="amountOfPeople" type="text" placeholder="Ilosc osób" />
+          osób
+          <button type="button" id="calculate">Policz</button>
         </form>
+      </div>
+      <div id="totalTip">
+        <span id="tip">0.00</span> zł
+        <small id="each">każdy</small>
+      </div>
     </div>
-    <div id="totalTip">
-        zł <span id="tip">0.00</span>
-        <small id="each">kazdy</small>
-    </div>
-</div>
 
-<script type="text/javascript" src="tipcalculator.js"></script>
-</body>
+    <script type="text/javascript" src="tipcalculator.js"></script>
+  </body>
 </html>
